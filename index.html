@@ -36,7 +36,23 @@ footer { text-align:center; padding:20px; background:#222; color:white; }
   </button>
 
 </form>
-<body>
+<body><script>
+function sendToWhatsApp(e){
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var address = document.getElementById("address").value;
+
+  var message = "New Order:%0AName: " + name + "%0AMobile: " + mobile + "%0AAddress: " + address;
+
+  var phone = "9309269775"; /9689031456
+
+  var url = "https://wa.me/" + phone + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+</script>
 
 <header>
 <h1>Welcome to Vijay Footwear</h1>
